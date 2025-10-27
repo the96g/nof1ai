@@ -1,0 +1,27 @@
+# 🌙 Nof1 Agents - Standalone Requirements
+# These pins mirror the root requirements where relevant, so the agent
+# can run independently (DeepSeek + HyperLiquid + formatting/logging).
+
+# ========== Core AI/LLM ==========
+openai==1.59.5            # DeepSeek uses OpenAI client
+anthropic==0.40.0         # Imported by model_factory
+groq==0.16.0              # Imported by model_factory
+google-generativeai==0.8.3  # Imported by model_factory
+
+# ========== HyperLiquid / Trading ==========
+hyperliquid-python-sdk==0.20.0
+eth-account==0.11.0
+web3==6.20.1
+requests==2.31.0
+httpx==0.28.1
+
+# ========== Data & Analysis ==========
+pandas>=2.2.2
+numpy>=1.26.4
+# pandas-ta wheels can require a newer pip; allow pre-release range
+# Let pip find the best compatible version
+pandas-ta-openbb
+
+# ========== Utilities ==========
+python-dotenv==1.0.0
+termcolor==2.3.0
